@@ -5,7 +5,7 @@ import { styles } from './styles';
 import { ButtonIcon} from '../../components/ButtonIcon'
 import IllustrationImg from '../../assets/illustration.png';
 import { useNavigation } from '@react-navigation/native';
-
+import { Background } from '../../components/Background'
 export function SignIn (){
   const navigation = useNavigation();
 
@@ -13,6 +13,9 @@ export function SignIn (){
     navigation.navigate('Home');
   }
   return(
+    <Background>
+
+   
     <View style={styles.container}>
       <Image source={IllustrationImg} style={styles.image} resizeMode="stretch"/>
       <View style={styles.content}> 
@@ -33,5 +36,6 @@ export function SignIn (){
 
       </View>
     </View>
+    </Background>
   )
 }
