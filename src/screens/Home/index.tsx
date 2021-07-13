@@ -17,7 +17,7 @@ export function Home (){
   const [loading, setLoading] = useState(true)
   const [appointments, setAppointments] = useState<AppointmentProps[]>([])
   const navigation = useNavigation()
-  
+
   function handleCategorySelect(categoryId: string) {
     categoryId === category ? setCategory('') : setCategory(categoryId)
   }
@@ -78,6 +78,8 @@ export function Home (){
               ItemSeparatorComponent={()=> <ListDivider /> }
           />
           </>}
+          
+         
     </Background>
 
   )
